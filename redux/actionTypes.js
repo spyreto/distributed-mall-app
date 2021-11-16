@@ -1,0 +1,12 @@
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_OUT';
+export const CHANGE_INFO = 'CHANGE_INFO';
+export const REFRESH_INFO = 'REFRESH_INFO';
+
+export const SET_PRODUCTS_DATA = 'SET_PRODUCTS_DATA';
+export const CLEAR_PRODUCTS_DATA = 'CLEAR_PRODUCTS_DATA';
+export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const ADD_HISTORY_ITEM = 'ADD_HISTORY_ITEM';
+
+export const SET_POSITION = 'SET_POSITION';
