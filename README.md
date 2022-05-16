@@ -3,7 +3,7 @@
 <!-- Distributed Mall admin inteface -->
 
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Apache-2.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -174,7 +174,7 @@ Project Link: [Distributed Mall App](https://github.com/spyreto/distributed-mall
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [issues-shield]:https://img.shields.io/github/issues/spyreto/distributed-mall-app?style=flat-square
 [issues-url]: https://github.com/spyreto/distributed-mall-app/issues
-[license-shield]: https://img.shields.io/github/license/spyreto/distributed-mall-app?style=flat-square
+[license-shield]: https://img.shields.io/github/license/spyreto/distributed-mall-admin?style=flat-square
 [license-url]: https://github.com/spyreto/distributed-mall-app/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/spiridon-dimou-2aa98216b/
