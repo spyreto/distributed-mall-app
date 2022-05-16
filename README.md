@@ -178,4 +178,4 @@ Project Link: [Distributed Mall App](https://github.com/spyreto/distributed-mall
 [license-url]: https://github.com/spyreto/distributed-mall-app/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/spiridon-dimou-2aa98216b/
-[app-screenshot]: app-screenshots/Screenshot_search.png
+[app-screenshot]: app-screenshots/search.png
