@@ -1,4 +1,4 @@
-#Tue Nov 02 23:18:49 EET 2021
-base.0=C\:\\Users\\spiro\\Desktop\\distributedMall\\distributedmallApp-master\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Wed May 11 13:31:23 EEST 2022
+base.0=C\:\\Users\\spiro\\Desktop\\DistributedMall\\distributed-mall-app\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

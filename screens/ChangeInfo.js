@@ -123,12 +123,12 @@ class ChangeInfo extends Component {
                   birthDate,
               );
               this.setModalVisible(
-                  'Η αλλαγή των στοιχείων σας ολοκληρώθηκε!',
+                  'Your info change is complete!',
                   false,
               );
           } else if (response.body.email) {
               this.setModalVisible(
-                  'To email που εισαγάγατε χρησιμοποιείται ήδη.',
+                  'The email you entered is already in use.',
                   true,
               );
           } else if (response.body.phone_number) {
@@ -171,9 +171,9 @@ class ChangeInfo extends Component {
 
   emailValidation = (email) => {
       if (methods.isEmpty(email)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       } if (!methods.validateEmail(email)) {
-          return 'Παρακαλώ εισαγάτε το σωστό email σας.';
+          return 'Please enter your valid email.';
       }
       return null;
   };
@@ -244,7 +244,7 @@ class ChangeInfo extends Component {
 
   nameValidation = (name) => {
       if (methods.isEmpty(name)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       }
       return null;
   };
@@ -283,9 +283,9 @@ class ChangeInfo extends Component {
 
   phoneNumberValidation = (phoneNumber) => {
       if (methods.isEmpty(phoneNumber)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       } if (!methods.validatePhoneNumber(phoneNumber)) {
-          return 'Παρακαλώ εισαγάτε το σωστό αριθμό τηλεφώνου σας.';
+          return 'Please enter your correct phone number.';
       }
       return null;
   };
@@ -394,7 +394,7 @@ class ChangeInfo extends Component {
                       <TextField
                           style={styles.textField}
                           icon="user"
-                          label="Όνομα"
+                          label="First name"
                           initialValue={firstName}
                           disabled={false}
                           onChangeText={this.handleFirtNameChange}
@@ -403,7 +403,7 @@ class ChangeInfo extends Component {
                       <TextField
                           /* eslint-disable react-native/no-inline-styles */
                           style={{ marginLeft: 52, marginRight: 16 }}
-                          label="Επώνυμο"
+                          label="Last name"
                           initialValue={lastName}
                           disabled={false}
                           onChangeText={this.handleLastNameChange}
@@ -411,7 +411,7 @@ class ChangeInfo extends Component {
                       />
                       <TextField
                           style={styles.textField}
-                          label="Τηλέφωνο"
+                          label="Phone"
                           icon="phone"
                           keyboardType="phone-pad"
                           initialValue={phoneNumber}
@@ -421,14 +421,14 @@ class ChangeInfo extends Component {
                       />
                       <DateField
                           style={styles.textField}
-                          label="Ημερομηνια γεννησης"
+                          label="Date of birth"
                           icon="birthday-cake"
                           initialValue={birthDate}
                           onChangeDate={this.handleBirthDateChange}
                       />
                       <View style={styles.saveButton}>
                           <Button
-                              label="ΑΠΟΘΗΚΕΥΣΗ"
+                              label="SAVE"
                               small={true}
                               enable={enableButton}
                               onPress={enableButton ? this.handleSavePress : null}

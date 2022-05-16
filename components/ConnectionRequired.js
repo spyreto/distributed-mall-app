@@ -57,7 +57,7 @@ export default function ConnectionRequired({
                 </View>
                 <View style={styles.signInButtonContainer}>
                     <Button
-                        label="ΣΥΝΔΕΣΗ"
+                        label="SIGN IN"
                         small={true}
                         onPress={() => navigation.navigate('SignIn', {
                             stack,

@@ -31,8 +31,8 @@ export default class ProductInfo extends React.Component {
       isFavorite: false,
       index: 0,
       routes: [
-          { key: 'buy', title: 'ΑΓΟΡΑ' },
-          { key: 'description', title: 'ΠΕΡΙΓΡΑΦΗ' },
+          { key: 'buy', title: 'BUY' },
+          { key: 'description', title: 'DESCRIPTION' },
       ],
   };
 

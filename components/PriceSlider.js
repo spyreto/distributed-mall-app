@@ -60,7 +60,7 @@ export default class PriceSlider extends React.Component {
       return (
           <View style={{ ...style, ...styles.container }}>
               <View style={styles.textContainer}>
-                  <Text style={styles.titleText}>Τιμή</Text>
+                  <Text style={styles.titleText}>Price</Text>
                   <Text style={styles.valueText}>{price} &#8364;</Text>
               </View>
 

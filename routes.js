@@ -57,7 +57,7 @@ function SearchStack({ navigation }) {
             <SearchRootStack.Screen
                 name="Search"
                 component={Search}
-                options={{ title: 'Αναζήτηση' }}
+                options={{ title: 'Search' }}
             />
             <SearchRootStack.Screen
                 name="Results"
@@ -99,7 +99,7 @@ function SearchStack({ navigation }) {
                 name="Filter"
                 component={Filter}
                 options={({ route }) => ({
-                    title: 'Φίλτρα',
+                    title: 'Filters',
                     headerLeft: () => (
                         <Icon
                             name="close"
@@ -117,17 +117,17 @@ function SearchStack({ navigation }) {
             <SearchRootStack.Screen
                 name="ProductInfo"
                 component={ProductInfo}
-                options={{ title: 'Πληροφορίες Προϊόντος' }}
+                options={{ title: 'Product Info' }}
             />
             <SearchRootStack.Screen
                 name="SignIn"
                 component={SignIn}
-                options={{ title: 'Σύνδεση' }}
+                options={{ title: 'Sign In' }}
             />
             <SearchRootStack.Screen
                 name="SignUp"
                 component={SignUp}
-                options={{ title: 'Εγγραφή' }}
+                options={{ title: 'Sign Up' }}
             />
         </SearchRootStack.Navigator>
     );
@@ -154,19 +154,19 @@ function FavoritesStack() {
             <FavoritesRootStack.Screen
                 name="Favorites"
                 component={Favorites}
-                options={{ title: 'Αγαπημένα' }}
+                options={{ title: 'Favorites' }}
             />
             <FavoritesRootStack.Screen
                 name="ConnectionRequired"
                 component={ConnectionRequired}
                 options={{
-                    title: 'Απαιτείται σύνδεση',
+                    title: 'Sign in required',
                 }}
             />
             <FavoritesRootStack.Screen
                 name="ProductInfo"
                 component={ProductInfo}
-                options={{ title: 'Πληροφορίες Προϊόντος' }}
+                options={{ title: 'Product Info' }}
             />
             <FavoritesRootStack.Screen
                 name="Map"
@@ -178,12 +178,12 @@ function FavoritesStack() {
             <FavoritesRootStack.Screen
                 name="SignIn"
                 component={SignIn}
-                options={{ title: 'Σύνδεση' }}
+                options={{ title: 'Sign In' }}
             />
             <FavoritesRootStack.Screen
                 name="SignUp"
                 component={SignUp}
-                options={{ title: 'Εγγραφή' }}
+                options={{ title: 'Sign Out' }}
             />
         </FavoritesRootStack.Navigator>
     );
@@ -211,25 +211,25 @@ function ProfileStack() {
                 name="Profile"
                 component={Profile}
                 options={{
-                    title: 'Λογαριασμός',
+                    title: 'Account',
                 }}
             />
             <ProfileRootStack.Screen
                 name="History"
                 component={History}
                 options={{
-                    title: 'Ιστορικό',
+                    title: 'History',
                 }}
             />
             <ProfileRootStack.Screen
                 name="ProductInfo"
                 component={ProductInfo}
-                options={{ title: 'Πληροφορίες Προϊόντος' }}
+                options={{ title: 'Product Info' }}
             />
             <ProfileRootStack.Screen
                 name="PersonalInfo"
                 component={PersonalInfo}
-                options={{ title: 'Προφίλ' }}
+                options={{ title: 'Account Info' }}
             />
             <ProfileRootStack.Screen
                 name="Map"
@@ -241,43 +241,43 @@ function ProfileStack() {
             <ProfileRootStack.Screen
                 name="FAQ"
                 component={FAQ}
-                options={{ title: 'Συχνές ερωτήσεις' }}
+                options={{ title: 'FAQ' }}
             />
             <ProfileRootStack.Screen
                 name="ContactUs"
                 component={ContactUs}
-                options={{ title: 'Επικοινωνία' }}
+                options={{ title: 'Contact Us' }}
             />
             <ProfileRootStack.Screen
                 name="ChangePassword"
                 component={ChangePassword}
                 options={{
-                    title: 'Αλλαγή κωδικού',
+                    title: 'Change Password',
                 }}
             />
             <ProfileRootStack.Screen
                 name="ChangeInfo"
                 component={ChangeInfo}
                 options={{
-                    title: 'Αλλαγή στοιχείων',
+                    title: 'Change Account Info',
                 }}
             />
             <ProfileRootStack.Screen
                 name="ConnectionRequired"
                 component={ConnectionRequired}
                 options={{
-                    title: 'Απαιτείται σύνδεση',
+                    title: 'Connection required',
                 }}
             />
             <ProfileRootStack.Screen
                 name="SignIn"
                 component={SignIn}
-                options={{ title: 'Σύνδεση' }}
+                options={{ title: 'Sign In' }}
             />
             <ProfileRootStack.Screen
                 name="SignUp"
                 component={SignUp}
-                options={{ title: 'Εγγραφή' }}
+                options={{ title: 'Sign Out' }}
             />
         </ProfileRootStack.Navigator>
     );
@@ -302,7 +302,7 @@ function BottomTabs() {
                 name="Search"
                 component={SearchStack}
                 options={{
-                    tabBarLabel: 'Αναζήτηση',
+                    tabBarLabel: 'Search',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="magnify" color={color} size={size} />
                     ),
@@ -312,7 +312,7 @@ function BottomTabs() {
                 name="Favorites"
                 component={FavoritesStack}
                 options={{
-                    tabBarLabel: 'Αγαπημένα',
+                    tabBarLabel: 'Favorites',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="heart-outline" color={color} size={size} />
                     ),
@@ -322,7 +322,7 @@ function BottomTabs() {
                 name="Profile"
                 component={ProfileStack}
                 options={{
-                    tabBarLabel: 'Λογαριασμός',
+                    tabBarLabel: 'Profile',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="account-outline" color={color} size={size} />
                     ),

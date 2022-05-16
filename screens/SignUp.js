@@ -136,10 +136,10 @@ class SignUp extends Component {
           ).then((response) => {
               if (response.status === 200) {
                   this.props.signIn(response.token, response.userInfo);
-                  this.setModalVisible('Η εγγραφή σας ολοκληρώθηκε!', false);
+                  this.setModalVisible('Your registration is complete!', false);
               } else if (response.body.email) {
                   this.setModalVisible(
-                      'To email που εισαγάγατε χρησιμοποιείται ήδη.',
+                      'The email you entered is already in use.',
                       true,
                   );
               } else if (response.body.error) {
@@ -182,9 +182,9 @@ class SignUp extends Component {
 
   emailValidation = (email) => {
       if (methods.isEmpty(email)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       } if (!methods.validateEmail(email)) {
-          return 'Παρακαλώ εισαγάτε το σωστό email σας.';
+          return 'Please enter your valid email.';
       }
       return null;
   };
@@ -253,7 +253,7 @@ class SignUp extends Component {
 
   nameValidation = (name) => {
       if (methods.isEmpty(name)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       }
       return null;
   };
@@ -291,9 +291,9 @@ class SignUp extends Component {
 
   phoneNumberValidation = (phoneNumber) => {
       if (methods.isEmpty(phoneNumber)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       } if (!methods.validatePhoneNumber(phoneNumber)) {
-          return 'Παρακαλώ εισαγάτε το σωστό αριθμό τηλεφώνου σας.';
+          return 'Please enter your correct phone number.';
       }
       return null;
   };
@@ -454,7 +454,7 @@ class SignUp extends Component {
                       <TextField
                           style={styles.textField}
                           icon="user"
-                          label="Όνομα"
+                          label="First name"
                           disabled={false}
                           onChangeText={this.handleFirtNameChange}
                           validation={this.nameValidation}
@@ -462,14 +462,14 @@ class SignUp extends Component {
                       <TextField
                           /* eslint-disable react-native/no-inline-styles */
                           style={{ marginLeft: 52, marginRight: 16 }}
-                          label="Επώνυμο"
+                          label="Last name"
                           disabled={false}
                           onChangeText={this.handleLastNameChange}
                           validation={this.nameValidation}
                       />
                       <TextField
                           style={styles.textField}
-                          label="Τηλέφωνο"
+                          label="Phone"
                           icon="phone"
                           keyboardType="phone-pad"
                           disabled={false}
@@ -478,7 +478,7 @@ class SignUp extends Component {
                       />
                       <DateField
                           style={styles.textField}
-                          label="Ημερομηνια γεννησης"
+                          label="Date of birth"
                           icon="birthday-cake"
                           initialValue={birthDate}
                           onChangeDate={this.handleBirthDateChange}
@@ -498,12 +498,12 @@ class SignUp extends Component {
                           />
                           <DropDownPicker
                               items={[
-                                  { label: 'Άνδρας', value: 10 },
-                                  { label: 'Γυναίκα', value: 20 },
+                                  { label: 'Man', value: 10 },
+                                  { label: 'Woman', value: 20 },
                               ]}
                               defaultNull={gender === null}
                               containerStyle={styles.dropDownPicker}
-                              placeholder="Φύλο"
+                              placeholder="Gender"
                               onChangeItem={(item) => this.handleGenderChange(item.value)}
                           />
                       </View>
@@ -511,12 +511,12 @@ class SignUp extends Component {
                           icon="key"
                           style={styles.textField}
                           onPasswordChange={this.handlePasswordChange}
-                          label="Κωδικός"
-                          confirmationLabel="Επιβεβαίωση κωδικού"
+                          label="Password"
+                          confirmationLabel="Confirm Password"
                       />
                       <View style={styles.signUpButtonContainer}>
                           <Button
-                              label="ΕΓΓΡΑΦΗ"
+                              label="SIGN UP"
                               small={true}
                               enable={enableButton}
                               onPress={this.handleSignUpPress}

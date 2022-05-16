@@ -32,55 +32,48 @@ export default function FAQ() {
             <View style={styles.container}>
                 <View style={styles.questionContainer}>
                     <Text style={styles.questionText}>
-            1. Πως πραγματοποιείται η παραλαβή ενός προϊόντος;
+            1. How is a product received?
                     </Text>
                     <Text style={styles.answerText}>
-            Η παραλαβή ενός προϊόντος πραγματοποιείται στο κατάστημα από το
-            οποίο έγινε η κράτηση.
+            The product is picked up at the store from where the reservation was made.
                     </Text>
                 </View>
                 <View style={styles.questionContainer}>
                     <Text style={styles.questionText}>
-            2. Πως πραγματοποιείται η πληρωμή για την αγορά ενός προϊόντος;
+            2. How is the payment made for the purchase of a product?
                     </Text>
                     <Text style={styles.answerText}>
-            Η πληρωμή ενός προϊόντος πραγματοποιείται στο κατάστημα από το οποίο
-            έγινε η κράτηση.
+            Payment for a product is made at the store from which the reservation was made.
                     </Text>
                 </View>
                 <View style={styles.questionContainer}>
                     <Text style={styles.questionText}>
-            3. Πόσο διαρκεί η κράτηση ενός προϊόντος;
+            3. What is the maximum reservation time of a product?
                     </Text>
                     <Text style={styles.answerText}>
-            Η κράτηση ενός προϊόντος διαρκεί εως τη λήξη του ωραριου λειτουργίας
-            των καταστημάτων.
+            The reservation of a product lasts until the end of the opening hours of the stores.
                     </Text>
                 </View>
                 <View style={styles.questionContainer}>
-                    <Text style={styles.questionText}>4. Τι είναι οι Orange Points;</Text>
+                    <Text style={styles.questionText}>4. What are Orange Points?</Text>
                     <Text style={styles.answerText}>
-            Είναι οι πόντοι που κερδίζετε από την αγορά προϊόντων εντός της
-            εφαρμογής
-                    </Text>
-                </View>
-                <View style={styles.questionContainer}>
-                    <Text style={styles.questionText}>
-            5. Πόσους Orange Points κερδίζω από την ολοκλήρωση της αγοράς ενός
-            προϊόντος;
-                    </Text>
-                    <Text style={styles.answerText}>
-            Για κάθε ένα ευρώ που δαπανάτε σε ολοκληρωμένες αγορές εντός της
-            εφαρμογής κερδίζετε έναν Orange Point.
+            These are the points you earn from buying products within the application.
                     </Text>
                 </View>
                 <View style={styles.questionContainer}>
                     <Text style={styles.questionText}>
-            6. Πως μπορώ να εξαργυρώσω τους Orange Points που έχω συλλέξει;
+            5. How many Orange Points do I earn from completing the purchase of a product?
                     </Text>
                     <Text style={styles.answerText}>
-            Εφόσον το σύνολο των Orange Points σας επαρκούν, μπορείτε να τους
-            χρησιμοποιείτε για την αγορά ενός προϊόντος.
+            For every euro you spend on complete purchases within the app you earn an Orange Point.
+                    </Text>
+                </View>
+                <View style={styles.questionContainer}>
+                    <Text style={styles.questionText}>
+            6. How can I redeem the Orange Points I have collected?
+                    </Text>
+                    <Text style={styles.answerText}>
+            If you have enough Orange Points, you can use them to buy a product.
                     </Text>
                 </View>
             </View>

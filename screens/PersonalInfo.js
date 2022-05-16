@@ -85,19 +85,19 @@ class ProfileInfo extends Component {
                       <TextField
                           style={styles.textField}
                           icon="user"
-                          label="Όνομα"
+                          label="First name"
                           initialValue={userInfo.firstName}
                           disabled={true}
                       />
                       <TextField
                           style={styles.textFieldLastName}
-                          label="Επώνυμο"
+                          label="Last name"
                           initialValue={userInfo.lastName}
                           disabled={true}
                       />
                       <TextField
                           style={styles.textField}
-                          label="Τηλέφωνο"
+                          label="Phone"
                           icon="phone"
                           keyboardType="phone-pad"
                           initialValue={userInfo.phoneNumber}
@@ -105,20 +105,20 @@ class ProfileInfo extends Component {
                       />
                       <TextField
                           style={styles.textField}
-                          label="Ημερομηνια γεννησης"
+                          label="Date of birth"
                           icon="birthday-cake"
                           initialValue={birthDate}
                           disabled={true}
                       />
                       <Divider />
                       <ArrowButton
-                          label="Αλλαγή στοιχείων"
+                          label="Change info"
                           onPress={() => navigation.navigate('ChangeInfo', { refresh: this.refresh })
                           }
                           style={styles.arrowButton}
                       />
                       <ArrowButton
-                          label="Αλλαγή κωδικού"
+                          label="Change Password"
                           onPress={() => navigation.navigate('ChangePassword', {
                               loggedInToken: userInfo.loggedInToken,
                           })
@@ -126,7 +126,7 @@ class ProfileInfo extends Component {
                           style={styles.arrowButton}
                       />
                       <ArrowButton
-                          label="Αποσύνδεση"
+                          label="Logout"
                           onPress={this.logout}
                           style={styles.arrowButton}
                       />

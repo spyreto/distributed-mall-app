@@ -64,19 +64,19 @@ export default class Dropdown extends React.Component {
                       style={styles.closeModalButton}
                       onPress={() => {
                           this.setState({ modalVisible: !this.state.modalVisible });
-                          this.setState({ payment: 'Χρήματα' });
+                          this.setState({ payment: 'Money' });
                       }}
                   >
-                      <Text style={styles.closeModalButtonText}>Χρήματα</Text>
+                      <Text style={styles.closeModalButtonText}>Money</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                       style={styles.closeModalButton}
                       onPress={() => {
                           this.setState({ modalVisible: !this.state.modalVisible });
-                          this.setState({ payment: 'Πόντους' });
+                          this.setState({ payment: 'Points' });
                       }}
                   >
-                      <Text style={styles.closeModalButtonText}>Πόντους</Text>
+                      <Text style={styles.closeModalButtonText}>Points</Text>
                   </TouchableOpacity>
               </SafeAreaView>
           </Modal>
@@ -96,7 +96,7 @@ export default class Dropdown extends React.Component {
                   }}
               >
                   <Text style={styles.textDropdownButton}>
-                      {payment || 'Πληρωμή με'}
+                      {payment || 'Pay with'}
                   </Text>
                   <Icon
                       name={modalVisible ? 'chevron-down' : 'chevron-right'}

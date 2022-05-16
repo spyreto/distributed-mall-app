@@ -65,7 +65,7 @@ class Favorites extends Component {
       );
   };
 
-  /* χρειρισμός επιλογής αφαίρεση από τα αγαπημένα */
+  /* Handling the selection "remove from favorites" */
   handleFavoriteButtonPress = (id) => {
       const { loggedInToken } = this.props;
 
@@ -97,7 +97,7 @@ class Favorites extends Component {
               {!loggedIn && (
                   <ConnectionRequired
                       navigation={navigation}
-                      label="Απαιτείται σύνδεση για την προβολή των αγαπημένων σας"
+                      label="Sign in required to view your favorites"
                       icon="heart"
                       stack="Favorites"
                       prevScreen="Favorites"
@@ -110,7 +110,7 @@ class Favorites extends Component {
                           size={64}
                           style={styles.icon}
                       />
-                      <Text style={styles.msgText}>Δεν έχετε αγαπημένα προϊόντα...</Text>
+                      <Text style={styles.msgText}>You do not have favorite products....</Text>
                   </View>
               ) : (
                   <FlatList

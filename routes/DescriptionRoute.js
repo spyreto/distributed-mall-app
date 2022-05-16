@@ -70,72 +70,72 @@ export default class DescriptionRoute extends Component {
       case 20:
           return (
               <View>
-                  <Text style={styles.label}>Κατασκευαστής:</Text>
+                  <Text style={styles.label}>Manufacturer:</Text>
                   <Text style={styles.infoText}>{productDetails.manufacturer}</Text>
-                  <Text style={styles.label}>Υλικό:</Text>
+                  <Text style={styles.label}>Material:</Text>
                   <Text style={styles.infoText}>{productDetails.materialLabel}</Text>
-                  <Text style={styles.label}>Χρώμα:</Text>
+                  <Text style={styles.label}>Color:</Text>
                   <Text style={styles.infoText}>{productDetails.colorLabel}</Text>
-                  <Text style={styles.label}>Περιγραφή:</Text>
+                  <Text style={styles.label}>Description:</Text>
                   <Text style={styles.infoText}>{productDetails.description}</Text>
               </View>
           );
       case 30:
           return (
               <View>
-                  <Text style={styles.label}>Κατασκευαστής:</Text>
+                  <Text style={styles.label}>Manufacturer:</Text>
                   <Text style={styles.infoText}>{productDetails.manufacturer}</Text>
-                  <Text style={styles.label}>Τύπος:</Text>
+                  <Text style={styles.label}>Type:</Text>
                   <Text style={styles.infoText}>{productDetails.typeLabel}</Text>
-                  <Text style={styles.label}>Υλικό:</Text>
+                  <Text style={styles.label}>Material:</Text>
                   <Text style={styles.infoText}>{productDetails.materialLabel}</Text>
-                  <Text style={styles.label}>Χρώμα:</Text>
+                  <Text style={styles.label}>Color:</Text>
                   <Text style={styles.infoText}>{productDetails.colorLabel}</Text>
-                  <Text style={styles.label}>Περιγραφή:</Text>
+                  <Text style={styles.label}>Description:</Text>
                   <Text style={styles.infoText}>{productDetails.description}</Text>
               </View>
           );
       case 35:
           return (
               <View>
-                  <Text style={styles.label}>Κατασκευαστής:</Text>
+                  <Text style={styles.label}>Manufacturer:</Text>
                   <Text style={styles.infoText}>{productDetails.manufacturer}</Text>
-                  <Text style={styles.label}>Τύπος:</Text>
+                  <Text style={styles.label}>Type:</Text>
                   <Text style={styles.infoText}>{productDetails.typeLabel}</Text>
-                  <Text style={styles.label}>Υλικό:</Text>
+                  <Text style={styles.label}>Material:</Text>
                   <Text style={styles.infoText}>{productDetails.materialLabel}</Text>
-                  <Text style={styles.label}>Χρώμα:</Text>
+                  <Text style={styles.label}>Color:</Text>
                   <Text style={styles.infoText}>{productDetails.colorLabel}</Text>
-                  <Text style={styles.label}>Τύπος κλεισίματος:</Text>
+                  <Text style={styles.label}>Type of closing:</Text>
                   <Text style={styles.infoText}>
                       {productDetails.typeOfClosingLabel}
                   </Text>
-                  <Text style={styles.label}>Περιγραφή:</Text>
+                  <Text style={styles.label}>Description:</Text>
                   <Text style={styles.infoText}>{productDetails.description}</Text>
               </View>
           );
       case 40:
           return (
               <View>
-                  <Text style={styles.label}>Κατασκευαστής:</Text>
+                  <Text style={styles.label}>Manufacturer:</Text>
                   <Text style={styles.infoText}>{productDetails.manufacturer}</Text>
-                  <Text style={styles.label}>Λειτουργία:</Text>
+                  <Text style={styles.label}>Display:</Text>
                   <Text style={styles.infoText}>{productDetails.displayLabel}</Text>
-                  <Text style={styles.label}>Μηχανισμός:</Text>
+                  <Text style={styles.label}>Μechanism</Text>
                   <Text style={styles.infoText}>{productDetails.mechanismLabel}</Text>
-                  <Text style={styles.label}>Χρώμα καντράν:</Text>
+                  <Text style={styles.label}>Face color:</Text>
                   <Text style={styles.infoText}>{productDetails.faceColorLabel}</Text>
-                  <Text style={styles.label}>Χρώμα λουριού:</Text>
+                  <Text style={styles.label}>Band color:</Text>
                   <Text style={styles.infoText}>{productDetails.bandColorLabel}</Text>
-                  <Text style={styles.label}>Υλικό λουριούς:</Text>
+                  <Text style={styles.label}>Βand material:</Text>
                   <Text style={styles.infoText}>
                       {productDetails.bandMaterialLabel}
                   </Text>
-                  <Text style={styles.label}>Αδιαβροχοποίηση:</Text>
+                  <Text style={styles.label}>Water resistance:</Text>
                   <Text style={styles.infoText}>
                       {productDetails.waterResistanceLabel}
                   </Text>
-                  <Text style={styles.label}>Περιγραφή:</Text>
+                  <Text style={styles.label}>Description:</Text>
                   <Text style={styles.infoText}>{productDetails.description}</Text>
               </View>
           );
@@ -152,7 +152,7 @@ export default class DescriptionRoute extends Component {
               <ScrollView style={styles.scrollView}>
                   <View style={styles.info}>
                       {loading && <ActivityIndicator size="large" />}
-                      {error && <Text>Σφάλμα...</Text>}
+                      {error && <Text>Error...</Text>}
                       {!loading && !error && this.renderInfo()}
                   </View>
               </ScrollView>

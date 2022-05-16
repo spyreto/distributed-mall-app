@@ -131,12 +131,12 @@ export default class SellerButton extends React.Component {
       modalVisible: false,
   };
 
-  /* Μένει ανοιχτό το Modal μέτα την επιστροφή με back button από την οθόνη του χάρτη */
+ /* Modal remains open after returning with a back button from the map screen */
   backButtonOpenModal = () => {
       this.setState({ modalVisible: true });
   };
 
-  /* Χειρισμός κατάσταση modal */
+  /* Handling modal state */
   handleModalState = () => {
       this.setState((previousState) => ({
           modalVisible: !previousState.modalVisible,
@@ -176,7 +176,7 @@ export default class SellerButton extends React.Component {
                       <View style={styles.sellerInfo}>
                           <Text style={styles.companyName}>{item.name}</Text>
                           <Text style={styles.distance}>
-                Απόσταση: {methods.distanceFormating(item.distance)}
+                Distance: {methods.distanceFormating(item.distance)}
                           </Text>
                       </View>
                       <View style={styles.valueInfo}>
@@ -199,7 +199,7 @@ export default class SellerButton extends React.Component {
       const { modalVisible } = this.state;
       const { sellers } = this.props;
 
-      /* Ταξινόμηση  πωλητώβ με βάση την τιμή */
+      /* Classification of sellers based on price */
       const sellersSorted = sellers.sort((a, b) => a.price > b.price);
 
       return (
@@ -215,12 +215,12 @@ export default class SellerButton extends React.Component {
                           style={styles.closeModalButton}
                           onPress={this.handleModalState}
                       >
-                          <Text style={styles.closeModalButtonText}> ΚΛΕΙΣΙΜΟ</Text>
+                          <Text style={styles.closeModalButtonText}>CLOSE</Text>
                       </TouchableOpacity>
                   </SafeAreaView>
               </Modal>
               <TouchableOpacity style={styles.button} onPress={this.handleModalState}>
-                  <Text style={styles.textButton}>EΠΙΛΟΓΗ ΠΩΛΗΤΗ</Text>
+                  <Text style={styles.textButton}>SELECT SELLER</Text>
               </TouchableOpacity>
           </View>
       );

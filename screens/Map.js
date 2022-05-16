@@ -36,7 +36,7 @@ export default class Map extends Component {
     }
 
     componentWillUnmount() {
-    /* Ανοιγμα του modal των πωλητών κατά την επιστροφή στην οθόνη του προϊόντος */
+    /* Open the modal with the sellers when returning to the product screen */
         const { backButtonOpenModal } = this.props.route.params;
         if (backButtonOpenModal) {
             backButtonOpenModal();
@@ -47,11 +47,11 @@ export default class Map extends Component {
       this.setState({ marginBottom: 0 });
   };
 
-  /* Συνάρτηση πλοήγησης μέσω google maps app  */
+  /* Navigation function via google maps app */
   handleGetDirections = () => {
-      /* Τοποθεσία πωλητή  */
+      /* Seller's location */
       const { sellerLocation } = this.props.route.params;
-      /* Τοποθεσία χρήστη  */
+      /* User's location  */
       const { userPosition } = this.props;
 
       const data = {
@@ -99,7 +99,7 @@ export default class Map extends Component {
                   <Callout onPress={this.handleGetDirections}>
                       <Text style={styles.sellerNameText}>{name}</Text>
                       <Text style={styles.navigationToSellerText}>
-              Οδηγίες προς το κατάστημα{' '}
+              Directions to the store{' '}
                       </Text>
                   </Callout>
               </Marker>

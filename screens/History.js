@@ -87,7 +87,7 @@ class History extends Component {
                           size={64}
                           style={styles.icon}
                       />
-                      <Text style={styles.msgText}>Δεν έχετε ιστορικό...</Text>
+                      <Text style={styles.msgText}>You have no history...</Text>
                   </View>
               )}
           </View>

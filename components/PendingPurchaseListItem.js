@@ -101,7 +101,7 @@ export default function PendingPurchaseListItem({
                             <Text style={styles.sellerName}>{item.seller}</Text>
                         </View>
                         <View style={styles.valueInfo}>
-                            {item.payment === 'Χρήματα' ? (
+                            {item.payment === 'Money' ? (
                                 <Text style={styles.priceEuro}>{item.price} &#8364;</Text>
                             ) : (
                                 <View style={styles.pricePointsView}>

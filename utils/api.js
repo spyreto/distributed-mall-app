@@ -5,14 +5,15 @@ import { API_URL } from '@env';
 import methods from './methods';
 
 const baseHttpApi = API_URL;
+console.log(baseHttpApi);
 
 const getSaleStatus = (status) => {
     if (status === 20) {
-        return 'Ολοκληρώθηκε';
+        return 'Completed';
     } if (status === 30) {
-        return 'Ακυρώθηκε';
+        return 'Canceled';
     }
-    return 'Αναμονή παραλαβής';
+    return 'Waiting receipt';
 };
 
 const mapDistance = (

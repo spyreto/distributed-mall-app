@@ -86,7 +86,7 @@ export default class Profile extends Component {
           loggedInToken,
       ).then((response) => {
           if (response.status === 200) {
-              this.setModalVisible('Η αλλαγή του κωδικού σας ολοκληρώθηκε!', false);
+              this.setModalVisible('Your password change is complete!', false);
           } else if (response.body) {
               this.setModalVisible(response.body, true);
           }
@@ -113,7 +113,7 @@ export default class Profile extends Component {
 
   oldPasswordValidation = (oldPassword) => {
       if (methods.isEmpty(oldPassword)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       }
       return null;
   };
@@ -135,9 +135,9 @@ export default class Profile extends Component {
   newPasswordValidation = (newPassword) => {
       const { newPasswordConfirm } = this.state;
       if (methods.isEmpty(newPassword)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       } if (newPassword !== newPasswordConfirm) {
-          return 'Τα πεδιά του νέου κωδικού δεν ταιριάζουν.';
+          return 'New password fields do not match.';
       }
       return null;
   };
@@ -165,9 +165,9 @@ export default class Profile extends Component {
   newPasswordConfirmValidation = (newPasswordConfirm) => {
       const { newPassword } = this.state;
       if (methods.isEmpty(newPasswordConfirm)) {
-          return 'To πεδίο είναι υποχρεωτικό.';
+          return 'This field is required.';
       } if (newPassword !== newPasswordConfirm) {
-          return 'Τα πεδιά του νέου κωδικού δεν ταιριάζουν.';
+          return 'New password fields do not match.';
       }
       return null;
   };
@@ -227,7 +227,7 @@ export default class Profile extends Component {
                   <View style={styles.container}>
                       <TextField
                           style={styles.textField}
-                          label="Προηγούμενος κωδικός"
+                          label="Old password"
                           secureTextEntry={true}
                           disabled={false}
                           onChangeText={this.handleOldPasswordChange}
@@ -235,7 +235,7 @@ export default class Profile extends Component {
                       />
                       <TextField
                           style={styles.textField}
-                          label="Νέος κωδικός"
+                          label="New password"
                           secureTextEntry={true}
                           disabled={false}
                           onChangeText={this.handleNewPasswordChange}
@@ -243,7 +243,7 @@ export default class Profile extends Component {
                       />
                       <TextField
                           style={styles.textField}
-                          label="Επιβεβαίωση νέος κωδικού"
+                          label="Confirm new password"
                           secureTextEntry={true}
                           disabled={false}
                           onChangeText={this.handleNewPasswordConfirmChange}
@@ -251,7 +251,7 @@ export default class Profile extends Component {
                       />
                       <View style={styles.changeButton}>
                           <Button
-                              label="ΑΛΛΑΓΗ"
+                              label="CHANGE"
                               small={true}
                               enable={enableButton}
                               onPress={enableButton ? this.handleChangePress : null}

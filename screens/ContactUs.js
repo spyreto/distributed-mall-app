@@ -1,5 +1,3 @@
-/* Ιncomplete screen */
-
 import React, { useState } from 'react';
 import {
     StyleSheet,
@@ -67,11 +65,11 @@ export default function ContactUs() {
                 <View style={styles.container}>
                     <TextField
                         style={styles.textField}
-                        label="Όνομα"
+                        label="First name"
                     />
                     <TextField
                         style={styles.textField}
-                        label="Επώνυμο"
+                        label="Last name"
                     />
                     <TextField
                         style={styles.textField}
@@ -82,12 +80,12 @@ export default function ContactUs() {
                         style={styles.textInput}
                         multiline
                         numberOfLines={5}
-                        placeholder="Παρακαλώ συμπληρώστε τα μήνυμα σας....."
+                        placeholder="Please fill in your message....."
                         onChangeText={(text) => onChangeText(text)}
                         value={value}
                     />
                     <View style={styles.sentButton}>
-                        <Button label="ΑΠΟΣΤΟΛΗ" small={true} enable={enable} />
+                        <Button label="SEND" small={true} enable={enable} />
                     </View>
                 </View>
             </ScrollView>

@@ -97,7 +97,7 @@ class Profile extends Component {
                 {loggedIn ? (
                     <View>
                         <View style={styles.pointsContainer}>
-                            <Text style={styles.pointsLabel}>Έχεις συγκεντρώσει</Text>
+                            <Text style={styles.pointsLabel}>You have collected</Text>
                             <SpinningImage
                                 source={orangePointsImg}
                                 style={styles.imgPoints}
@@ -112,23 +112,23 @@ class Profile extends Component {
                         </View>
                         <View style={styles.menuContainer}>
                             <ArrowButton
-                                label="Προφίλ"
+                                label="Account info"
                                 icon="user-circle"
                                 onPress={() => navigation.navigate('PersonalInfo')}
                             />
                             <ArrowButton
-                                label="Ιστορικό"
+                                label="History"
                                 icon="history"
                                 onPress={() => navigation.navigate('History')}
                             />
                             <Divider />
                             <ArrowButton
-                                label="Συχνές ερωτήσεις"
+                                label="FAQ"
                                 icon="question"
                                 onPress={() => navigation.navigate('FAQ')}
                             />
                             <ArrowButton
-                                label="Επικοινωνία"
+                                label="Contact us"
                                 icon="phone"
                                 onPress={() => navigation.navigate('ContactUs')}
                             />
@@ -137,7 +137,7 @@ class Profile extends Component {
                 ) : (
                     <ConnectionRequired
                         navigation={navigation}
-                        label="Απαιτείται σύνδεση για την προβολή του λογαριασμού σας"
+                        label="Sign in is required to view your account"
                         icon="user"
                         stack="Profile"
                         prevScreen="Profile"

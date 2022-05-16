@@ -86,8 +86,8 @@ export default class FavoriteButton extends React.Component {
               <View style={styles.textContainer}>
                   <Text style={styles.textButton}>
                       {isSelected
-                          ? 'Αφαίρεση από τα αγαπημένα'
-                          : 'Προσθήκη στα αγαπημένα'}
+                          ? 'Remove from favorites'
+                          : 'Add to Favorites'}
                   </Text>
               </View>
           </TouchableOpacity>

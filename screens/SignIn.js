@@ -127,11 +127,11 @@ class SignIn extends Component {
                       <View style={styles.centeredView}>
                           <View style={styles.modalView}>
                               <Text style={styles.modalText}>
-                  Εσφαλμένος κωδικός ή email!
+                  Wrong password or email!
                               </Text>
                               <Button
                                   onPress={this.setModalVisible}
-                                  label="ΟΚ"
+                                  label="OK"
                                   small={true}
                               />
                           </View>
@@ -149,7 +149,7 @@ class SignIn extends Component {
                       />
                       <TextField
                           style={styles.textField}
-                          label="Κωδικός"
+                          label="Password"
                           secureTextEntry={true}
                           onChangeText={(text) => {
                               this.setState({ password: text });
@@ -158,13 +158,13 @@ class SignIn extends Component {
                       <View style={styles.signInButtonContainer}>
                           <Button
                               onPress={this.handleSignInButtonPress}
-                              label="ΣΥΝΔΕΣΗ"
+                              label="Sign in"
                               small={true}
                           />
                       </View>
                       <View style={styles.signUpButtonContainer}>
                           <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-                              <Text style={styles.signUpText}>Δημιουργία λογαριασμού</Text>
+                              <Text style={styles.signUpText}>Sign up</Text>
                           </TouchableOpacity>
                       </View>
                   </View>

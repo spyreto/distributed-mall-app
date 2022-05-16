@@ -136,7 +136,7 @@ export default function HistoryListItem({ item, onPress, navigation }) {
                         </View>
                     </View>
                     <View style={styles.orderStatusContainer}>
-                        <Text style={styles.quantity}>Ποσότητα: {item.quantity}</Text>
+                        <Text style={styles.quantity}>Quantity: {item.quantity}</Text>
                         <Text style={styles.orderStatusText}>{item.status}</Text>
                     </View>
                 </View>

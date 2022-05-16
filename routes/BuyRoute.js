@@ -206,12 +206,12 @@ class BuyRoute extends React.Component {
       return null;
   };
 
-  /* Χειρισμός state Banner σύνδεσης για αγορά */
+  /* Handling the state of "connect to buy" banner*/
   handleBannerState = () => {
       this.setState({ userConnectionBanner: !this.state.userConnectionBanner });
   };
 
-  // Χειρισμός προσθήκης στα Αγαπημένα
+  // Handling add to Favorites
   handleFavoriteButtonChange = () => {
       const { isFavorite } = this.state;
       const { product, loggedInToken } = this.props;
@@ -309,7 +309,7 @@ class BuyRoute extends React.Component {
       }
   };
 
-  // Εμφανιζόμενα φίλτρα αναλόγως τον τύπο του προϊόντος
+  // Display filters depending on the product type
   renderFilters = (categoryType, productId, sellerId) => {
       switch (categoryType) {
       case 10:
@@ -317,7 +317,7 @@ class BuyRoute extends React.Component {
           return (
               <View>
                   <SizeBuyFilter
-                      label="Μέγεθος"
+                      label="Size"
                       productId={productId}
                       sellerId={sellerId}
                       categoryType={categoryType}
@@ -357,7 +357,7 @@ class BuyRoute extends React.Component {
                   <FadeInView style={styles.bannerContainer} duration={2000}>
                       <View style={styles.bannerTextContainer}>
                           <Text style={styles.bannerText}>
-                Απαιτείται σύνδεση για την αγορά προϊόντων.
+                Sign in is required to purchase products.
                           </Text>
                       </View>
                       <View style={styles.bannerButtonsContainer}>
@@ -366,7 +366,7 @@ class BuyRoute extends React.Component {
                               onPress={this.handleBannerState}
                           >
                               <Text style={styles.bannerButtonText}>
-                  ΣΥΝΕΧΙΣΤΕ ΩΣ ΕΠΙΣΚΕΠΤΗΣ
+                 CONTINUE AS GUEST
                               </Text>
                           </TouchableOpacity>
                           <TouchableOpacity
@@ -374,7 +374,7 @@ class BuyRoute extends React.Component {
                               onPress={() => navigation.navigate('SignIn', { prevScreen: 'ProductInfo' })
                               }
                           >
-                              <Text style={styles.bannerButtonText}>ΣΥΝΔΕΣΗ</Text>
+                              <Text style={styles.bannerButtonText}>SIGN IN</Text>
                           </TouchableOpacity>
                       </View>
                   </FadeInView>
@@ -456,7 +456,7 @@ class BuyRoute extends React.Component {
                           {selectedSeller.name
                 && this.renderFilters(categoryType, id, selectedSeller.id)}
                           <NumberInput
-                              label="Ποσότητα"
+                              label="Quantity"
                               style={styles.quantityInput}
                               onValueChange={this.handleQuantityChange}
                               initValue={1}
@@ -466,14 +466,14 @@ class BuyRoute extends React.Component {
                           />
                           <Divider />
                           <ChoiceChip
-                              label="Τρόπος πληρωμής"
-                              data={['Χρήματα', 'Πόντους']}
+                              label="Payment method"
+                              data={['Money', 'Points']}
                               onSelctionChange={this.handlePaymentChange}
                               style={styles.choiceChip}
                           />
                           <View style={styles.buyButton}>
                               <ReservationButton
-                                  label="ΚΡΑΤΗΣΗ"
+                                  label="RESERVATION"
                                   enable={enableBuyButton}
                                   small={true}
                                   quantity={quantity}
@@ -494,7 +494,7 @@ class BuyRoute extends React.Component {
                               size={64}
                               style={styles.msgIcon}
                           />
-                          <Text style={styles.msgText}>Δε βρέθηκαν καταστήματα...</Text>
+                          <Text style={styles.msgText}>No stores found ...</Text>
                       </View>
                   )}
               </ScrollView>

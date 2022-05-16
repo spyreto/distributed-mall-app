@@ -39,8 +39,7 @@ const styles = StyleSheet.create({
     },
 });
 
-/* Απαιτείται σύνδεση για την προβολή του ιστορικού σας */
-
+/* Login required to view your history */
 export default function ConnectionRequired({ label, icon }) {
     return (
         <ScrollView>
@@ -50,7 +49,7 @@ export default function ConnectionRequired({ label, icon }) {
                     <Icon name={icon} size={120} style={styles.icon} />
                 </View>
                 <View style={styles.signInButtonContainer}>
-                    <Button label="ΣΥΝΔΕΣΗ" small={true} />
+                    <Button label="SIGN IN" small={true} />
                 </View>
             </View>
         </ScrollView>

@@ -91,52 +91,52 @@ export default class Filter extends Component {
       case 20:
           return (
               <View>
-                  <SizeFilter label="Μέγεθος" style={styles.filter} />
+                  <SizeFilter label="Size" style={styles.filter} />
                   <Divider />
-                  <ColorFilter label="Χρώμα" style={styles.filter} />
+                  <ColorFilter label="Color" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Υλικό" style={styles.filter} />
+                  <BoxPickerFilter label="Material" style={styles.filter} />
                   <Divider />
               </View>
           );
       case 30:
           return (
               <View>
-                  <BoxPickerFilter label="Τύπος" style={styles.filter} />
+                  <BoxPickerFilter label="Type" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Υλικό" style={styles.filter} />
+                  <BoxPickerFilter label="Material" style={styles.filter} />
                   <Divider />
-                  <ColorFilter label="Χρώμα" style={styles.filter} />
+                  <ColorFilter label="Color" style={styles.filter} />
                   <Divider />
               </View>
           );
       case 35:
           return (
               <View>
-                  <BoxPickerFilter label="Τύπος" style={styles.filter} />
+                  <BoxPickerFilter label="Type" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Υλικό" style={styles.filter} />
+                  <BoxPickerFilter label="Material" style={styles.filter} />
                   <Divider />
-                  <ColorFilter label="Χρώμα" style={styles.filter} />
+                  <ColorFilter label="Color" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Τύπος κλεισίματος" style={styles.filter} />
+                  <BoxPickerFilter label="Type of closing" style={styles.filter} />
                   <Divider />
               </View>
           );
       case 40:
           return (
               <View>
-                  <BoxPickerFilter label="Λειτουργία" style={styles.filter} />
+                  <BoxPickerFilter label="Display" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Μηχανισμός" style={styles.filter} />
+                  <BoxPickerFilter label="Μechanism" style={styles.filter} />
                   <Divider />
-                  <ColorFilter label="Χρώμα καντράν" style={styles.filter} />
+                  <ColorFilter label="Face color" style={styles.filter} />
                   <Divider />
-                  <ColorFilter label="Χρώμα λουριού" style={styles.filter} />
+                  <ColorFilter label="Band color" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Υλικό λουριού" style={styles.filter} />
+                  <BoxPickerFilter label="Βand material" style={styles.filter} />
                   <Divider />
-                  <BoxPickerFilter label="Αδιαβροχοποίηση" style={styles.filter} />
+                  <BoxPickerFilter label="Water resistance" style={styles.filter} />
                   <Divider />
               </View>
           );
@@ -165,7 +165,7 @@ export default class Filter extends Component {
                   <View>
                       <Divider />
                       <BoxPickerFilter
-                          label="Κατασκευαστής"
+                          label="Manufacturer"
                           style={styles.filter}
                           values={this.manufacturers}
                           initialSelectedValues={manufacturers}
@@ -176,7 +176,7 @@ export default class Filter extends Component {
                       <View style={styles.submitButton}>
                           <Button
                               onPress={this.handleSubmitButtonPress}
-                              label="ΕΦΑΡΜΟΓΗ"
+                              label="APPLY"
                               small={true}
                           />
                       </View>

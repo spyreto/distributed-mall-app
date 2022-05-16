@@ -71,12 +71,12 @@ class ReservationButton extends React.Component {
       messege: null,
   };
 
-  /* Χειρισμός κατάσταση modal */
+  /* Handling modal state */
   handleModalState = () => {
       this.setState({ modalVisible: !this.state.modalVisible });
   };
 
-  /* Χειρισμός κατάσταση modal */
+  /* Handling modal state */
   handleErrorModalState = () => {
       this.setState({ errorModalVisible: !this.state.errorModalVisible });
   };
@@ -86,10 +86,10 @@ class ReservationButton extends React.Component {
           quantity, payment, selectedSeller, orangePoints,
       } = this.props;
       if (
-          payment === 'Πόντους'
+          payment === 'Points'
       && !(quantity * selectedSeller.price * 200 < orangePoints)
       ) {
-          const message = 'Οι orange πόντοι σας δεν επαρκούν...';
+          const message = 'Your orange points are not enough ...';
           this.setState({ errorModalVisible: true, message });
       } else {
           this.handleModalState();
@@ -109,7 +109,7 @@ class ReservationButton extends React.Component {
 
       let paidWithMoney;
 
-      if (payment === 'Χρήματα') {
+      if (payment === 'Money') {
           paidWithMoney = true;
       } else {
           paidWithMoney = false;
@@ -148,17 +148,16 @@ class ReservationButton extends React.Component {
       return (
           <View style={styles.modalContainer}>
               <View style={styles.titleTextContainer}>
-                  <Text style={styles.titleText}>Επιβεβαίωση κράτησης</Text>
+                  <Text style={styles.titleText}>Reservation confirmation</Text>
               </View>
               <View style={styles.supportingTextContainer}>
                   <Text style={styles.supportingText}>
-          Η παραγγελία σας θα βρίσκεται στο κατάστημα μέχρι τη λήξη του
-          ωραρίου καταστημάτων. Παρακαλούμε μεταβείτε στο κατάστημα για την
-          ολοκλήρωσή της αγοράς
-                      {payment === 'Χρήματα'
-                          ? `και κερδίστε ${
+         Your order will be in the store until the end of store hours. 
+         Please go to the store to complete the purchase
+                      {payment === 'Money'
+                          ? `and earn ${
                               parseInt((selectedSeller.price * 10), 10)
-                          } orange πόντους!`
+                          } orange points!`
                           : '.'}
                   </Text>
               </View>
@@ -167,13 +166,13 @@ class ReservationButton extends React.Component {
                       style={styles.modalButton}
                       onPress={this.handleModalState}
                   >
-                      <Text style={styles.modalButtonText}>ΑΚΥΡΩΣΗ</Text>
+                      <Text style={styles.modalButtonText}>CANCEL</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                       style={styles.modalButton}
                       onPress={this.handleConfirmReservationPress}
                   >
-                      <Text style={styles.modalButtonText}>ΕΠΙΒΕΒΑΙΩΣΗ</Text>
+                      <Text style={styles.modalButtonText}>CONFIRM</Text>
                   </TouchableOpacity>
               </View>
           </View>
@@ -185,7 +184,7 @@ class ReservationButton extends React.Component {
       return (
           <View style={styles.modalContainer}>
               <View style={styles.titleTextContainer}>
-                  <Text style={styles.titleText}>Αδυναμία κράτησης</Text>
+                  <Text style={styles.titleText}>Unable to reserve</Text>
               </View>
               <View style={styles.supportingTextContainer}>
                   <Text style={styles.supportingText}>{message}</Text>

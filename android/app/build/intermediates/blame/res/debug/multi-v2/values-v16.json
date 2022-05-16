@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\spiro\\Desktop\\distributedMall\\distributedmallApp-master\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\spiro\\Desktop\\DistributedMall\\distributed-mall-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
                     "source": "C:\\Users\\spiro\\.gradle\\caches\\transforms-2\\files-2.1\\4f509a65121478d6153615d7ef5b7c5f\\core-1.1.0\\res\\values-v16\\values-v16.xml",

@@ -60,14 +60,14 @@ export default class SetPassword extends React.Component {
       if (methods.isEmpty(password)) {
           this.setState({
               password,
-              passwordErrorMsg: 'To πεδίο είναι υποχρεωτικό.',
+              passwordErrorMsg: 'This field is required.',
           });
       } else if (password !== passwordConfirm) {
           if (!methods.isEmpty(passwordConfirm)) {
               this.setState({
                   password,
-                  passwordErrorMsg: 'Τα πεδιά του κωδικού δεν ταιριάζουν.',
-                  passwordConfirmErrorMsg: 'Τα πεδιά του κωδικού δεν ταιριάζουν.',
+                  passwordErrorMsg: 'Password fields do not match.',
+                  passwordConfirmErrorMsg: 'Password fields do not match.',
               });
           } else {
               this.setState({ password });
@@ -76,17 +76,17 @@ export default class SetPassword extends React.Component {
           this.setState({
               password,
               passwordErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες.',
+          'Password must contain at least 8 characters.',
               passwordConfirmErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες.',
+          'Password must contain at least 8 characters.',
           });
       } else if (!methods.checkPassword(password)) {
           this.setState({
               password,
               passwordErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον ένα γράμμα και έναν αριθμό',
+          'Password must contain at least one letter and one number',
               passwordConfirmErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον ένα γράμμα και έναν αριθμό',
+          'Password must contain at least one letter and one number',
           });
       } else {
           this.setState({
@@ -105,29 +105,29 @@ export default class SetPassword extends React.Component {
       if (methods.isEmpty(passwordConfirm)) {
           this.setState({
               passwordConfirm,
-              passwordConfirmErrorMsg: 'To πεδίο είναι υποχρεωτικό.',
+              passwordConfirmErrorMsg: 'This field is required.',
           });
       } else if (password !== passwordConfirm) {
           this.setState({
               passwordConfirm,
-              passwordErrorMsg: 'Τα πεδιά του κωδικού δεν ταιριάζουν.',
-              passwordConfirmErrorMsg: 'Τα πεδιά του κωδικού δεν ταιριάζουν.',
+              passwordErrorMsg: 'Password fields do not match.',
+              passwordConfirmErrorMsg: 'Password fields do not match.',
           });
       } else if (password.length < 8) {
           this.setState({
               passwordConfirm,
               passwordErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες.',
+          'Password must contain at least 8 characters.',
               passwordConfirmErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες.',
+          'Password must contain at least 8 characters.',
           });
       } else if (!methods.checkPassword(password)) {
           this.setState({
               passwordConfirm,
               passwordErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον ένα γράμμα και έναν αριθμό',
+          'Password must contain at least one letter and one number',
               passwordConfirmErrorMsg:
-          'O κωδικός πρέπει να περιέχει τουλάχιστον ένα γράμμα και έναν αριθμό',
+          'Password must contain at least one letter and one number',
           });
       } else {
           this.setState({

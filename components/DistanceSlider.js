@@ -59,7 +59,7 @@ export default class DistanceSlider extends React.Component {
       } else {
           if (newDistance === 16000) {
               this.setState({
-                  value: '> 16 χλμ',
+                  value: '> 16 km',
                   distance: 16000,
               });
           }
@@ -81,7 +81,7 @@ export default class DistanceSlider extends React.Component {
       return (
           <View style={{ ...style, ...styles.container }}>
               <View style={styles.textContainer}>
-                  <Text style={styles.titleText}>Απόσταση</Text>
+                  <Text style={styles.titleText}>Distance</Text>
                   <Text style={styles.valueText}>{value}</Text>
               </View>
               <Slider

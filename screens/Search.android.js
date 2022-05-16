@@ -105,7 +105,7 @@ class Search extends Component {
             /* eslint-disable no-unused-vars */
             (error) => Alert.alert(
                 'Error',
-                'Πρέκυψε σφάλμα, παρακαλώ επανεκκινήστε την εφαρμογή',
+                'An error occurred, please restart the application',
             ),
             { enableHighAccuracy: true, timeout: 200000, maximumAge: 1000 },
         );
@@ -135,7 +135,8 @@ class Search extends Component {
   handleSearchButtonPress = () => {
       const { navigation } = this.props;
       const { distance, keyword, categories } = this.state;
-      /* Έλεγχος μη κενού keyword προς αναζήτηση keyword === '' */
+      
+      /* Check non-empty keyword */      
       if (keyword !== '') {
           navigation.navigate('Results', {
               keyword,
@@ -169,14 +170,14 @@ class Search extends Component {
                               size={64}
                               style={styles.icon}
                           />
-                          <Text style={styles.msgText}>Προέκυψε σφάλμα...</Text>
+                          <Text style={styles.msgText}>An error occurred ...</Text>
                       </View>
                   )}
                   {!isFetchingPosition && !error && (
                       <KeyboardAvoidingView style={styles.appContainer}>
                           <View>
                               <SearchInput
-                                  placeholder="Ψάχνω για..."
+                                  placeholder="Looking for..."
                                   onKeywordChange={this.handleKeywordChange}
                                   style={styles.searchInput}
                               />
@@ -192,7 +193,7 @@ class Search extends Component {
                           <View style={styles.searchButton}>
                               <Button
                                   onPress={this.handleSearchButtonPress}
-                                  label="ΑΝΑΖΗΤΗΣΗ"
+                                  label="SEARCH"
                                   small={false}
                               />
                           </View>

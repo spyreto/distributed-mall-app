@@ -80,7 +80,7 @@ class Results extends Component {
             userLatitude,
         );
 
-        /* Έλεγχος για τον άν βρέθηκαν προϊόντα και ενημέρωση της μεγαβλητής hasProducts */
+        /* Check if products have been found and update the hasProducts var */
         if (fetchedProducts.length === 0) {
             store.setState({ hasProducts: false });
         } else {
@@ -175,7 +175,7 @@ class Results extends Component {
                           size={64}
                           style={styles.icon}
                       />
-                      <Text style={styles.msgText}>Προέκυψε σφάλμα...</Text>
+                      <Text style={styles.msgText}>An error occurred...</Text>
                   </View>
               )}
               {!loading && !error && hasProducts && (
@@ -192,7 +192,7 @@ class Results extends Component {
                           size={64}
                           style={styles.icon}
                       />
-                      <Text style={styles.msgText}>Δεν βρέθηκαν προϊόντα...</Text>
+                      <Text style={styles.msgText}>No products found...</Text>
                   </View>
               )}
           </View>

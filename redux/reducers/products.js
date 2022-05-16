@@ -75,7 +75,7 @@ export default function (state = initialState, action) {
             paidWithMoney: payment,
             quantity,
             sellingPrice: selectedSeller.price * quantity,
-            status: 'Αναμονή παραλαβής',
+            status: 'Waiting for receipt',
             statusCode: 10,
         };
 

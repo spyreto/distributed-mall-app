@@ -105,12 +105,12 @@ export default function ProductListItem({
                     <View style={styles.productInfo}>
                         <Text style={styles.productName}>{name}</Text>
                         <Text style={styles.distance}>
-              Πλησιέστερο {minDistance}
+              Nearest {minDistance}
                         </Text>
                     </View>
                     <View style={styles.valueInfo}>
                         <View style={styles.priceView}>
-                            <Text style={styles.fromText}>από </Text>
+                            <Text style={styles.fromText}>from </Text>
                             <Text style={styles.priceEuro}>{minPrice} &#8364;</Text>
                         </View>
                         <View style={styles.pricePointsView}>

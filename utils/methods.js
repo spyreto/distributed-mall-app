@@ -22,12 +22,12 @@ export default {
         return [...new Set(manufacturers)];
     },
 
-    /* Μορφοποίηση απόστασης χλμ ή μέτρα */
+    /* Formulation of distance in kilometers or meters */
     distanceFormating(distance) {
         if (distance >= 1000) {
-            return `${Math.round((distance / 1000) * 100) / 100} χλμ`;
+            return `${Math.round((distance / 1000) * 100) / 100} km`;
         }
-        return `${distance} μ`;
+        return `${distance} m`;
     },
 
     mainFilters(products, filters) {
@@ -50,7 +50,7 @@ export default {
         );
     },
 
-    /* Μορφοποίηση ημερομηνίας σε μορφή dd/mm/yy και yyyy-mm-dd */
+    /* Date formatting in dd / mm / yy and yyyy-mm-dd */
     formatPyhtonDate(date) {
         return (
             `${date.getFullYear()
@@ -83,20 +83,20 @@ export default {
     isEmpty(str) {
         return !str || str.length === 0;
     },
-    /* Έλεγχος εγκυρότητας email */
+    /* Email validity check */
     validateEmail(email) {
         /* eslint-disable no-useless-escape */
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     },
-    /* Έλεγχος εγκυρότητας αριθμού κινητού τηλεφώνου */
+    /* Phone number validation check */
     validatePhoneNumber(phoneNumber) {
         const re = /^(69)[0-9]{8}$/;
         return re.test(String(phoneNumber));
     },
 
     checkPassword(password) {
-        const passwordRegex = /^(?=.*\d)(?=.*[α-ωΑ-Ω-a-zA-Z]).{8,20}$/;
+        const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{8,20}$/;
         return passwordRegex.test(password);
     },
 };
