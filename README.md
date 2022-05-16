@@ -68,13 +68,6 @@ Distributed Mall is a multi vendor eCommerce platform, which will allow independ
 
 ## Distributed Mall App
 
-<!-- APP SCREENSHOTS -->
-<div align="center">
-  <img src="app-screenshots/search.png" alt="App Screenshot Search" width="200" height="400" style="margin: 25px;">
-  <img src="app-screenshots/product_info.png" alt="App Screenshot Product Info" width="200" height="400" style="margin: 25px;">
-  <img src="app-screenshots/results.png" alt="App Screenshot Results.png" width="200" height="400" style="margin: 25px;">
-</div>
-
 ### Overview
 
 Distributed Mall App is developed with react native and it is a location based mobile application for the users of the e-commerce platform Distributed Mall. Through this app users can perform the following  operations:
