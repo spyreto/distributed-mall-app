@@ -34,7 +34,7 @@
             <a href="#about-the-project">About Distributed Mall</a>
         </li>
         <li>
-            <a href="#distributed-mall-app">Distributed Mall Admin</a>
+            <a href="#distributed-mall-app">Distributed Mall App</a>
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#built-with">Built With</a></li>
