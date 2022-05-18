@@ -103,7 +103,7 @@ Main frameworks/libraries used to develop this project:
 *  [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 *  [Distributed Mall Admin](https://github.com/spyreto/distributed-mall-admin)
 
-<p align="right">(<a href="#top">bacak to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ### Installation
